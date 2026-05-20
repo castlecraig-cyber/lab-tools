@@ -131,24 +131,100 @@ tr.ramp-row:hover td { background: #1a1a38; }
 .btn-cal:hover { opacity: 1; border-color: #3db843; }
 .notif-bar { font-size: 0.68rem; color: #333; margin-top: 3px; display: flex; align-items: center; gap: 5px; }
 .notif-bar.granted { color: #2a5a2a; }
-.btn-row-group { display: flex; gap: 10px; flex-wrap: wrap; }
+.btn-row-group { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.insert-pos-wrap { display: flex; align-items: center; gap: 6px; background: #1a1a2e; border: 1px solid #2e2e50; border-radius: 8px; padding: 6px 10px; }
+.insert-pos-lbl { font-size: 0.75rem; color: #5a5a8a; white-space: nowrap; letter-spacing: 0.04em; }
+.insert-pos-input { width: 54px; background: #12122a; border: 1.5px solid #35355a; border-radius: 6px; color: #c8b8ff; font-size: 0.95rem; font-weight: bold; text-align: center; padding: 5px 4px; outline: none; -moz-appearance: textfield; }
+.insert-pos-input::-webkit-inner-spin-button, .insert-pos-input::-webkit-outer-spin-button { -webkit-appearance: none; }
+.insert-pos-input:focus { border-color: #a78bfa; }
+.insert-pos-input::placeholder { color: #3a3a5a; font-weight: normal; }
 .btn-add      { padding: 11px 18px; background: linear-gradient(135deg,#162016,#0f180f); color: #3db843; border: 1px solid #1e401e; border-radius: 8px; font-size: 0.9rem; font-weight: bold; cursor: pointer; touch-action: manipulation; }
 .btn-add-ramp { padding: 11px 18px; background: linear-gradient(135deg,#12102a,#0a0818); color: #a78bfa; border: 1px solid #2a2050; border-radius: 8px; font-size: 0.9rem; font-weight: bold; cursor: pointer; touch-action: manipulation; }
 .btn-add:hover { border-color: #3db843; }
 .btn-add-ramp:hover { border-color: #a78bfa; }
 
-/* ── Sheet bar ── */
-#sheetBar { background: #12121e; border-top: 2px solid #2a2a40; display: flex; align-items: flex-end; padding: 0 12px; gap: 2px; min-height: 36px; position: sticky; bottom: 0; z-index: 50; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-.sheet-tab { padding: 7px 10px 7px 14px; font-size: 0.78rem; color: #5a5a8a; background: #18182a; border: 1px solid #2a2a42; border-bottom: none; border-radius: 5px 5px 0 0; cursor: pointer; white-space: nowrap; user-select: none; display: flex; align-items: center; gap: 5px; flex-shrink: 0; }
-.sheet-tab.active { color: #f5a623; background: #181824; border-color: #4a3800; font-weight: bold; }
+/* ── Sheet bar — BIGGER TABS ── */
+#sheetBar {
+  background: #12121e;
+  border-top: 2px solid #2a2a40;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 12px;
+  gap: 3px;
+  min-height: 52px;
+  position: sticky;
+  bottom: 0;
+  z-index: 50;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.sheet-tab {
+  padding: 11px 16px 11px 20px;
+  font-size: 1rem;
+  color: #6a6a9a;
+  background: #18182a;
+  border: 1px solid #2a2a42;
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+  white-space: nowrap;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  min-height: 46px;
+  transition: background 0.15s, color 0.15s;
+}
+.sheet-tab.active {
+  color: #f5a623;
+  background: #181824;
+  border-color: #4a3800;
+  font-weight: bold;
+  font-size: 1.05rem;
+  min-height: 50px;
+}
 .sheet-tab-name { flex: 1; }
-.sheet-tab-del { background: none; border: none; color: #555; font-size: 0.85rem; cursor: pointer; padding: 0 2px; line-height: 1; }
+.sheet-tab-del {
+  background: none;
+  border: none;
+  color: #555;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0 3px;
+  line-height: 1;
+}
 .sheet-tab-del:hover { color: #e03535; }
 .sheet-tab.active .sheet-tab-del { color: #8a6a00; }
-.sheet-tab-dup { background: none; border: none; color: #4a4a8a; font-size: 0.82rem; cursor: pointer; padding: 0 2px; line-height: 1; transition: color 0.15s; }
+.sheet-tab-dup {
+  background: none;
+  border: none;
+  color: #4a4a8a;
+  font-size: 1.05rem;
+  cursor: pointer;
+  padding: 0 3px;
+  line-height: 1;
+  transition: color 0.15s;
+}
 .sheet-tab-dup:hover { color: #a0a0f8; }
 .ramp-bath-lbl { font-size: 0.68rem; color: #5dd865; text-align: center; margin-top: 3px; min-height: 14px; }
-.sheet-add-btn { background: none; border: 1px solid #2a2a42; border-radius: 5px; color: #555; font-size: 1rem; width: 26px; height: 26px; margin-bottom: 5px; cursor: pointer; display: flex; align-items: center; justify-content: center; margin-left: 4px; flex-shrink: 0; }
+.sheet-add-btn {
+  background: none;
+  border: 1px solid #2a2a42;
+  border-radius: 6px;
+  color: #555;
+  font-size: 1.3rem;
+  width: 38px;
+  height: 38px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 6px;
+  flex-shrink: 0;
+  transition: color 0.15s, border-color 0.15s;
+}
 .sheet-add-btn:hover { color: #f5a623; border-color: #f5a623; }
 
 /* ── Settings modal ── */
@@ -183,7 +259,6 @@ tr.ramp-row:hover td { background: #1a1a38; }
   table, tbody { display: block; min-width: 0; }
   thead { display: none; }
 
-  /* Each row becomes a card */
   tr {
     display: grid;
     grid-template-columns: 48px 1fr 1fr 40px;
@@ -205,7 +280,6 @@ tr.ramp-row:hover td { background: #1a1a38; }
   .td-sc  { grid-area: sc;  border: none !important; padding: 2px 0 !important; }
   .td-del { grid-area: del; align-self: center; text-align: center; border: none !important; }
 
-  /* Larger touch targets */
   .bath-input, .temp-input { padding: 11px 6px; font-size: 1rem; }
   .dt-input  { font-size: 0.85rem; padding: 10px 5px; min-width: 0; }
   .dur-input { width: auto; flex: 1; padding: 10px 5px; font-size: 0.85rem; }
@@ -216,8 +290,13 @@ tr.ramp-row:hover td { background: #1a1a38; }
   .finish-time { margin-left: 0; font-size: 0.7rem; }
   .cd-display { font-size: 1rem; }
 
-  /* Topbar: notes full width on very small screens */
   .notes-input { min-width: 120px; }
+
+  /* Slightly larger tabs on mobile too */
+  .sheet-tab { padding: 12px 14px 12px 16px; font-size: 1rem; min-height: 48px; }
+  .sheet-tab.active { font-size: 1.05rem; min-height: 52px; }
+
+  .insert-pos-wrap { width: 100%; }
 }
 </style>
 </head>
@@ -238,18 +317,18 @@ tr.ramp-row:hover td { background: #1a1a38; }
 <div id="settingsOverlay" onclick="overlayClick(event)">
   <div id="settingsPanel">
     <div class="s-header">
-      <h2>⚙ Time Settings</h2>
-      <button class="btn-close" onclick="closeSettings()">✕</button>
+      <h2>&#x2699; Time Settings</h2>
+      <button class="btn-close" onclick="closeSettings()">&#x2715;</button>
     </div>
     <div class="s-clock">
       <div class="s-clock-row">
         <div class="s-clock-box">
-          <div class="city">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Edinburgh (Local)</div>
+          <div class="city">&#x1F3F4; Edinburgh (Local)</div>
           <div class="time-d edin" id="localClock">--:--:--</div>
           <div class="date-s" id="localDate"></div>
         </div>
         <div class="s-clock-box">
-          <div class="city">🌐 UTC</div>
+          <div class="city">&#x1F310; UTC</div>
           <div class="time-d utc-d" id="utcClock">--:--:--</div>
         </div>
       </div>
@@ -259,7 +338,7 @@ tr.ramp-row:hover td { background: #1a1a38; }
       <label>Timezone Override</label>
       <div class="s-row">
         <select id="tzPreset" onchange="applyPreset()">
-          <option value="">— Select preset —</option>
+          <option value="">&#x2014; Select preset &#x2014;</option>
           <option value="0">UTC+0  (Edinburgh / London Winter)</option>
           <option value="1">UTC+1  (Edinburgh BST Summer)</option>
           <option value="2">UTC+2</option>
@@ -286,7 +365,7 @@ tr.ramp-row:hover td { background: #1a1a38; }
     <input type="number" class="rig-input" id="rigNumber" value="3" min="1" oninput="saveRigNumber()">
   </div>
   <textarea class="notes-input" id="notesInput" placeholder="Notes..." oninput="saveNotes()" rows="1"></textarea>
-  <button class="btn-settings" onclick="openSettings()">⚙ Settings</button>
+  <button class="btn-settings" onclick="openSettings()">&#x2699; Settings</button>
   <button class="btn-power" id="powerBtn" onclick="togglePower()" title="Shutdown / Wake">
     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5">
       <path d="M12 2v6M5.6 5.6A9 9 0 1018.4 5.6"/>
@@ -302,9 +381,9 @@ tr.ramp-row:hover td { background: #1a1a38; }
       <thead>
         <tr>
           <th class="col-num">#</th>
-          <th class="col-ind">Indicator °C</th>
-          <th class="col-bath">Bath °C</th>
-          <th class="col-sc">Start &amp; Duration → Countdown → Finish</th>
+          <th class="col-ind">Indicator &#xB0;C</th>
+          <th class="col-bath">Bath &#xB0;C</th>
+          <th class="col-sc">Start &amp; Duration &#x2192; Countdown &#x2192; Finish</th>
           <th class="col-del"></th>
         </tr>
       </thead>
@@ -312,6 +391,10 @@ tr.ramp-row:hover td { background: #1a1a38; }
     </table>
   </div>
   <div class="btn-row-group">
+    <div class="insert-pos-wrap">
+      <span class="insert-pos-lbl">After row</span>
+      <input type="number" id="insertPos" class="insert-pos-input" min="0" placeholder="—" title="Insert after this row number (0 = top)">
+    </div>
     <button class="btn-add"      onclick="addDataRow()">+ Add Row</button>
     <button class="btn-add-ramp" onclick="addRampRow()">+ Add Ramp</button>
   </div>
@@ -324,9 +407,8 @@ const SVG_PLAY='<svg viewBox="0 0 24 24" width="13" height="13" fill="currentCol
 const SVG_STOP='<svg viewBox="0 0 24 24" width="11" height="11" fill="currentColor"><rect x="5" y="5" width="14" height="14" rx="2"/></svg>';
 const STORAGE_KEY='labTools_v4';
 
-/* ── Sequential auto-start: top→down, only first non-finished row ── */
-function autoStartSequential(){
-  stopAllTimers();
+function autoStartSequential(doStop){
+  if(doStop!==false) stopAllTimers();
   const sheet=sheetsData[currentSheetIdx];
   let foundActive=false;
   sheet.rows.forEach(row=>{
@@ -341,21 +423,20 @@ function autoStartSequential(){
     const btn=document.getElementById('playbtn_'+row.id);
     if(finEl){finEl.textContent='Finish: '+formatFinish(tMs);finEl.className='finish-time set';}
     if(calBtn)calBtn.style.display='';
-    if(foundActive) return; // rows below active: leave at --:--:--
+    if(foundActive) return;
     if(tMs<=realUtcMs()){
-      // done
-      if(cdEl){cdEl.textContent='⏰ 00:00:00';cdEl.className='cd-display done';}
+      if(cdEl){cdEl.textContent='\u23F0 00:00:00';cdEl.className='cd-display done';}
     } else {
-      // first active row
       foundActive=true;
-      rowTimers[row.id]=setInterval(()=>tickRow(row.id),1000);
-      tickRow(row.id);
+      if(!rowTimers[row.id]){ // don't double-start
+        rowTimers[row.id]=setInterval(()=>tickRow(row.id),1000);
+        tickRow(row.id);
+      }
       if(btn){btn.innerHTML=SVG_STOP;btn.classList.add('running');}
     }
   });
 }
 
-/* ── Chain: when active row finishes, start the next one ── */
 function startNextInSequence(finishedRowId){
   const sheet=sheetsData[currentSheetIdx];
   const fi=sheet.rows.findIndex(r=>r.id===finishedRowId);
@@ -374,10 +455,9 @@ function startNextInSequence(finishedRowId){
     if(finEl){finEl.textContent='Finish: '+formatFinish(tMs);finEl.className='finish-time set';}
     if(calBtn)calBtn.style.display='';
     if(tMs<=realUtcMs()){
-      if(cdEl){cdEl.textContent='⏰ 00:00:00';cdEl.className='cd-display done';}
-      continue; // skip finished, try next
+      if(cdEl){cdEl.textContent='\u23F0 00:00:00';cdEl.className='cd-display done';}
+      continue;
     }
-    // start this row
     if(rowTimers[row.id])clearInterval(rowTimers[row.id]);
     rowTimers[row.id]=setInterval(()=>tickRow(row.id),1000);
     tickRow(row.id);
@@ -386,7 +466,6 @@ function startNextInSequence(finishedRowId){
   }
 }
 
-/* ── Power toggle (shutdown / wake) ── */
 let isShutdown = false;
 setInterval(() => {
   const el = document.getElementById('shutdownClock');
@@ -409,6 +488,7 @@ function togglePower() {
     document.body.style.background = '';
   }
 }
+
 let audioCtx=null;
 function initAudio(){
   if(audioCtx) return;
@@ -434,7 +514,6 @@ function playAlarm(){
   }catch(e){}
 }
 
-/* ── Notifications ── */
 async function requestNotifPermission(){
   if(!('Notification'in window)) return;
   if(Notification.permission==='default') await Notification.requestPermission();
@@ -451,21 +530,20 @@ function doAlarm(rowId){
   const sheet=sheetsData[currentSheetIdx];
   const idx=sheet.rows.indexOf(row)+1;
   const lbl=row.type==='ramp'?'Ramp ':'Row ';
-  showNotification(sheet.name+' — '+lbl+idx+' Done! ⏰','Finished at '+formatFinish(row.targetMs));
+  showNotification(sheet.name+' \u2014 '+lbl+idx+' Done! \u23F0','Finished at '+formatFinish(row.targetMs));
 }
 
-/* ── ICS Calendar download ── */
 function downloadICS(rowId){
   const row=sheetsData[currentSheetIdx].rows.find(r=>r.id===rowId);
   if(!row||!row.targetMs){alert('Start the countdown first.');return;}
   const sheet=sheetsData[currentSheetIdx];
   const idx=sheet.rows.indexOf(row)+1;
   const lbl=row.type==='ramp'?'Ramp ':'Row ';
-  const summary=sheet.name+' — '+lbl+idx+' Finish';
+  const summary=sheet.name+' \u2014 '+lbl+idx+' Finish';
   const finishStr=formatFinish(row.targetMs);
   const desc=row.type==='ramp'
-    ?'Finishing: '+finishStr+'\\nRamp from '+(row.startTemp||'?')+'°C to '+(row.endTemp||'?')+'°C\\nDuration: '+(row.durationStr||'?')+' | Rate: '+(row.rateStr||'?')+' °C/h\\nStirrer: '+(row.stirrer?'ON':'OFF')
-    :'Finishing: '+finishStr+'\\nIndicator: '+(row.indVal||'?')+'°C | Duration: '+(row.durationStr||'?')+'\\nStirrer: '+(row.stirrer?'ON':'OFF');
+    ?'Finishing: '+finishStr+'\\nRamp from '+(row.startTemp||'?')+'\xB0C to '+(row.endTemp||'?')+'\xB0C\\nDuration: '+(row.durationStr||'?')+' | Rate: '+(row.rateStr||'?')+' \xB0C/h\\nStirrer: '+(row.stirrer?'ON':'OFF')
+    :'Finishing: '+finishStr+'\\nIndicator: '+(row.indVal||'?')+'\xB0C | Duration: '+(row.durationStr||'?')+'\\nStirrer: '+(row.stirrer?'ON':'OFF');
   function icsDate(ms){const d=new Date(ms);return d.getUTCFullYear()+pad(d.getUTCMonth()+1)+pad(d.getUTCDate())+'T'+pad(d.getUTCHours())+pad(d.getUTCMinutes())+pad(d.getUTCSeconds())+'Z';}
   const ics=[
     'BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Lab Tools//EN','CALSCALE:GREGORIAN','METHOD:PUBLISH',
@@ -485,14 +563,12 @@ function downloadICS(rowId){
   const fname=(lbl+idx+'_'+sheet.name).replace(/\s+/g,'_')+'.ics';
   const isIOS=/iPad|iPhone|iPod/.test(navigator.userAgent)&&!window.MSStream;
   if(isIOS){
-    // iOS Safari: navigate to blob URL → system offers "Add to Calendar"
     window.location.href=url;
     setTimeout(()=>URL.revokeObjectURL(url),5000);
   }else{
     const a=document.createElement('a');
     a.href=url;a.download=fname;
     document.body.appendChild(a);a.click();document.body.removeChild(a);
-    // Android: after short delay try to open (triggers calendar intent)
     setTimeout(()=>{
       const a2=document.createElement('a');
       a2.href=url;a2.target='_blank';
@@ -507,16 +583,13 @@ const rowTimers={};
 let sheetsData=[{name:'RIG 3',rigNumber:3,refInd:'',refBath:'',notes:'',rows:[]}];
 let currentSheetIdx=0;
 
-/* ── Storage ── */
 function saveToStorage(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify({sheetsData,rowIdCounter,currentSheetIdx}));}catch(e){}}
 function loadFromStorage(){
   try{
-    // Try v4 first, then migrate from v3
     let raw=localStorage.getItem(STORAGE_KEY)||localStorage.getItem('labTools_v3');
     if(!raw) return false;
     const d=JSON.parse(raw);
     if(!d.sheetsData||!d.sheetsData.length) return false;
-    // Migrate: ensure all rows have type and all sheets have notes
     d.sheetsData.forEach(s=>{
       if(!s.notes) s.notes='';
       (s.rows||[]).forEach(r=>{if(!r.type)r.type='data';});
@@ -528,7 +601,6 @@ function loadFromStorage(){
   }catch(e){return false;}
 }
 
-/* ── Utilities ── */
 function realUtcMs(){return Date.now()+serverOffset;}
 function pad(n){return String(Math.floor(Math.abs(n))).padStart(2,'0');}
 function parseDuration(str){
@@ -541,60 +613,54 @@ function parseDuration(str){
 }
 function msToDur(ms){const t=Math.round(Math.abs(ms)/1000);return pad(Math.floor(t/3600))+':'+pad(Math.floor((t%3600)/60))+':'+pad(t%60);}
 
-/* Duration auto-formatter: user types digits only, colons auto-inserted */
 function attachDurFormatter(el, onChange) {
   el.setAttribute('inputmode','numeric');
   el.setAttribute('autocomplete','off');
-  // _d = raw digits typed so far, max 6, left-to-right
   el._d = el.value.replace(/\D/g,'').slice(0,6);
 
-  function apply() {
-    if (!el._d) { el.value=''; if(onChange) onChange(''); return; }
+  function apply(fireChange) {
+    if (!el._d) { el.value=''; if(fireChange&&onChange) onChange(''); return; }
     const p = el._d.padStart(6,'0');
     el.value = p.slice(0,2)+':'+p.slice(2,4)+':'+p.slice(4,6);
-    if(onChange) onChange(el.value);
+    if(fireChange&&onChange) onChange(el.value);
   }
 
-  // Desktop: keydown gives exact key info
+  el.setDur = function(str) {
+    el._d = (str||'').replace(/\D/g,'').slice(0,6);
+    apply(false); // just update display, don't fire onChange
+  };
+
   el.addEventListener('keydown', e => {
-    if (e.ctrlKey||e.metaKey||e.key==='Tab') return; // allow shortcuts
-    if (e.key==='Backspace') {
-      e.preventDefault(); el._d=el._d.slice(0,-1); apply(); return;
-    }
-    if (e.key==='Delete') {
-      e.preventDefault(); el._d=''; apply(); return;
-    }
+    if (e.ctrlKey||e.metaKey||e.key==='Tab') return;
+    if (e.key==='Backspace') { e.preventDefault(); el._d=el._d.slice(0,-1); apply(true); return; }
+    if (e.key==='Delete') { e.preventDefault(); el._d=''; apply(true); return; }
     if (/^\d$/.test(e.key)) {
       e.preventDefault();
       if (el._d.length<6) el._d+=e.key;
-      apply(); return;
+      apply(true); return;
     }
-    // Unknown key (e.g. mobile 'Unidentified'): don't preventDefault
-    // so the browser fires 'input' which the handler below catches
   });
 
-  // Mobile fallback: fires after browser already changed el.value
   el.addEventListener('input', () => {
     const cur = el.value.replace(/\D/g,'');
     if (cur.length > el._d.length) {
-      // digit(s) added — append them (up to 6 total)
       el._d = (el._d + cur.slice(el._d.length)).slice(0,6);
     } else if (cur.length < el._d.length) {
-      // deletion
       el._d = el._d.slice(0, cur.length);
     }
-    apply();
+    apply(true);
   });
 
   el.addEventListener('paste', e => {
     e.preventDefault();
     const txt=(e.clipboardData||window.clipboardData).getData('text');
     el._d=(el._d+txt.replace(/\D/g,'')).slice(0,6);
-    apply();
+    apply(true);
   });
 
-  apply(); // initialise display from stored value
+  apply(false); // init: just format display, don't overwrite row.durationStr
 }
+
 function calcRate(st,et,durStr){
   const a=parseFloat(st),b=parseFloat(et),dms=parseDuration(durStr);
   if(isNaN(a)||isNaN(b)||isNaN(dms)||dms===0) return '';
@@ -612,22 +678,16 @@ function formatFinish(tMs){
   const d=new Date(tMs);
   return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate())+'  '+pad(d.getHours())+':'+pad(d.getMinutes());
 }
-/* Convert datetime-local string to UTC ms, correcting for timezone */
 function localStrToTargetMs(dtStr,durationMs){
   if(!dtStr) return NaN;
-  let startMs=new Date(dtStr).getTime(); // parsed as system local → UTC ms
+  let startMs=new Date(dtStr).getTime();
   if(manualTzOffset!==null){
-    // User typed time in manualTz. Browser treated it as system local.
-    // We need UTC for the intended time: UTC = typed_time - manualOffset
-    // typed_time in UTC = startMs + sysOffsetMs  (cancel system interpretation)
-    // then subtract manual offset to get real UTC
-    const sysOffMs=-(new Date().getTimezoneOffset())*60000; // +ve = east of UTC
+    const sysOffMs=-(new Date().getTimezoneOffset())*60000;
     startMs=startMs+sysOffMs-manualTzOffset*3600000;
   }
   return startMs+durationMs;
 }
 
-/* ── Clock ── */
 setInterval(()=>{
   const u=realUtcMs(),ud=new Date(u);
   const uel=document.getElementById('utcClock');
@@ -650,15 +710,14 @@ async function syncTime(){
     const d=await r.json();
     serverOffset=new Date(d.utc_datetime).getTime()-Date.now();
     const el=document.getElementById('syncNote');
-    if(el)el.textContent='✓ Synced ('+(serverOffset>=0?'+':'')+Math.round(serverOffset/1000)+'s)';
+    if(el)el.textContent='\u2713 Synced ('+(serverOffset>=0?'+':'')+Math.round(serverOffset/1000)+'s)';
   }catch{
     serverOffset=0;
     const el=document.getElementById('syncNote');
-    if(el)el.textContent='⚠ Sync failed — using system clock';
+    if(el)el.textContent='\u26A0 Sync failed \u2014 using system clock';
   }
 }
 
-/* ── Settings ── */
 function openSettings(){document.getElementById('settingsOverlay').style.display='flex';}
 function closeSettings(){document.getElementById('settingsOverlay').style.display='none';}
 function overlayClick(e){if(e.target===document.getElementById('settingsOverlay'))closeSettings();}
@@ -667,7 +726,6 @@ function applyManual(){const v=document.getElementById('manualOffset').value;man
 function resetOffset(){manualTzOffset=null;document.getElementById('tzPreset').value='';document.getElementById('manualOffset').value='';updateTzDisplay();}
 function updateTzDisplay(){const el=document.getElementById('offsetDisplay');if(el)el.textContent=manualTzOffset===null?'Current offset: using system clock':'Current offset: UTC'+(manualTzOffset>=0?'+':'')+manualTzOffset;}
 
-/* ── Rig & Notes ── */
 function saveRigNumber(){
   const v=parseInt(document.getElementById('rigNumber').value),n=isNaN(v)?3:v;
   sheetsData[currentSheetIdx].rigNumber=n;sheetsData[currentSheetIdx].name='RIG '+n;
@@ -675,7 +733,6 @@ function saveRigNumber(){
 }
 function saveNotes(){sheetsData[currentSheetIdx].notes=document.getElementById('notesInput').value;saveToStorage();}
 
-/* ── Bath offset ── */
 function recalcBathOffset(){
   const iv=parseFloat(document.getElementById('ind_ref')?.value);
   const bv=parseFloat(document.getElementById('bath_ref')?.value);
@@ -684,7 +741,7 @@ function recalcBathOffset(){
     bathCalcOffset=bv-iv;
     const sign=bathCalcOffset>=0?'+':'';
     box.className='offset-box active';
-    box.innerHTML='<b>Offset:</b> '+sign+bathCalcOffset.toFixed(4)+' °C &nbsp;|&nbsp; Bath = Indicator '+sign+bathCalcOffset.toFixed(4);
+    box.innerHTML='<b>Offset:</b> '+sign+bathCalcOffset.toFixed(4)+' \xB0C &nbsp;|&nbsp; Bath = Indicator '+sign+bathCalcOffset.toFixed(4);
   }else{bathCalcOffset=null;box.className='offset-box';box.textContent='Waiting for reference row input...';}
   recalcAllBath();
 }
@@ -694,27 +751,24 @@ function recalcRampBath(row){
   if(!sb&&!eb) return;
   if(bathCalcOffset!==null){
     const st=parseFloat(row.startTemp),et=parseFloat(row.endTemp);
-    if(sb) sb.textContent=!isNaN(st)?'Bath '+(st+bathCalcOffset).toFixed(2)+'°C':'—';
-    if(eb) eb.textContent=!isNaN(et)?'Bath '+(et+bathCalcOffset).toFixed(2)+'°C':'—';
+    if(sb) sb.textContent=!isNaN(st)?'Bath '+(st+bathCalcOffset).toFixed(2)+'\xB0C':'\u2014';
+    if(eb) eb.textContent=!isNaN(et)?'Bath '+(et+bathCalcOffset).toFixed(2)+'\xB0C':'\u2014';
   }else{
-    if(sb) sb.textContent='—';
-    if(eb) eb.textContent='—';
+    if(sb) sb.textContent='\u2014';
+    if(eb) eb.textContent='\u2014';
   }
 }
-
 function recalcAllBath(){
   sheetsData[currentSheetIdx].rows.forEach(row=>{
     if(row.type==='ramp'){recalcRampBath(row);return;}
     const cell=document.getElementById('bath_'+row.id);if(!cell)return;
     const ind=parseFloat(row.indVal);
     if(bathCalcOffset!==null&&!isNaN(ind)){cell.textContent=(ind+bathCalcOffset).toFixed(2);cell.className='calc-value';}
-    else{cell.textContent='—';cell.className='calc-value calc-empty';}
+    else{cell.textContent='\u2014';cell.className='calc-value calc-empty';}
   });
 }
 
-/* ── Countdown per row ── */
 function toggleRowTimer(rowId){if(rowTimers[rowId])stopRowTimer(rowId);else startRowTimer(rowId);}
-
 function startRowTimer(rowId){
   initAudio();
   requestNotifPermission();
@@ -724,16 +778,24 @@ function startRowTimer(rowId){
   const cdEl=document.getElementById('cd_'+rowId);
   const finEl=document.getElementById('fin_'+rowId);
   const btn=document.getElementById('playbtn_'+rowId);
-  if(!row||!startEl||!durEl||!cdEl||!btn) return;
+  if(!row||!startEl||!cdEl||!btn) return;
 
-  if(!startEl.value){cdEl.textContent='Set start time';cdEl.className='cd-display done';return;}
-  const dms=parseDuration(durEl.value);
+  // Use DOM value first, fall back to saved row value
+  const startVal = startEl.value || row.startDateStr || '';
+  if(!startVal){cdEl.textContent='Set start time';cdEl.className='cd-display done';return;}
+
+  const durVal = (durEl && durEl.value) || row.durationStr || '';
+  const dms=parseDuration(durVal);
   if(isNaN(dms)||dms===0){cdEl.textContent='Set duration / rate';cdEl.className='cd-display done';return;}
 
-  row.startDateStr=startEl.value;row.durationStr=durEl.value;
-  // ── FIXED timezone formula ──
-  row.targetMs=localStrToTargetMs(startEl.value,dms);
+  row.startDateStr=startVal;
+  row.durationStr=durVal;
+  // Sync the DOM input to match what we're using
+  if(durEl && durEl.value!==durVal){
+    if(durEl.setDur) durEl.setDur(durVal); else durEl.value=durVal;
+  }
 
+  row.targetMs=localStrToTargetMs(startVal,dms);
   if(rowTimers[rowId])clearInterval(rowTimers[rowId]);
   rowTimers[rowId]=setInterval(()=>tickRow(rowId),1000);
   tickRow(rowId);
@@ -753,13 +815,12 @@ function tickRow(rowId){
   const cdEl=document.getElementById('cd_'+rowId);
   if(!row||!row.targetMs||!cdEl) return;
   const diff=row.targetMs-realUtcMs();
-  if(diff<=0){cdEl.textContent='⏰ 00:00:00';cdEl.className='cd-display done';doAlarm(rowId);stopRowTimer(rowId);startNextInSequence(rowId);return;}
+  if(diff<=0){cdEl.textContent='\u23F0 00:00:00';cdEl.className='cd-display done';doAlarm(rowId);stopRowTimer(rowId);startNextInSequence(rowId);return;}
   const ts=Math.floor(diff/1000);
   cdEl.textContent=pad(Math.floor(ts/3600))+':'+pad(Math.floor((ts%3600)/60))+':'+pad(ts%60);
   cdEl.className='cd-display ticking';
 }
 
-/* ── Ramp helpers ── */
 function getLastTemp(){
   const rows=sheetsData[currentSheetIdx].rows;
   for(let i=rows.length-1;i>=0;i--){
@@ -771,14 +832,17 @@ function getLastTemp(){
 function updateRampDerived(row){
   if(row.lastEdited==='rate'&&row.rateStr){
     const dur=calcDur(row.startTemp,row.endTemp,row.rateStr);
-    if(dur){const el=document.getElementById('dur_'+row.id);if(el)el.value=dur;row.durationStr=dur;}
+    if(dur){
+      const el=document.getElementById('dur_'+row.id);
+      if(el){ if(el.setDur) el.setDur(dur); else el.value=dur; }
+      row.durationStr=dur;
+    }
   }else if(row.durationStr){
     const rate=calcRate(row.startTemp,row.endTemp,row.durationStr);
     if(rate!==''){const el=document.getElementById('rate_'+row.id);if(el)el.value=rate;row.rateStr=rate;}
   }
 }
 
-/* ── Stirrer toggle (shared) ── */
 function buildStirrerToggle(row){
   const wrap=document.createElement('div');wrap.className='stirrer-wrap';
   const lbl=document.createElement('span');lbl.className='stirrer-lbl';lbl.textContent='Stirrer';
@@ -802,23 +866,21 @@ function buildStirrerToggle(row){
   return wrap;
 }
 
-/* ── Build SC bottom (shared) ── */
 function buildScBottom(row){
   const bot=document.createElement('div');bot.className='sc-bot';
-  const lbl=document.createElement('span');lbl.className='sc-lbl';lbl.textContent='Offset';bot.appendChild(lbl);
+  const lbl=document.createElement('span');lbl.className='sc-lbl';lbl.textContent='CD';bot.appendChild(lbl);
   const cd=document.createElement('span');cd.className='cd-display';cd.id='cd_'+row.id;cd.textContent='--:--:--';bot.appendChild(cd);
   const fin=document.createElement('span');fin.className='finish-time';fin.id='fin_'+row.id;
   if(row.targetMs){fin.textContent='Finish: '+formatFinish(row.targetMs);fin.className='finish-time set';}
   bot.appendChild(fin);
   const calBtn=document.createElement('button');
-  calBtn.className='btn-cal';calBtn.id='calbtn_'+row.id;calBtn.title='Add to Calendar';calBtn.textContent='📅';
+  calBtn.className='btn-cal';calBtn.id='calbtn_'+row.id;calBtn.title='Add to Calendar';calBtn.textContent='\uD83D\uDCC5';
   calBtn.style.display=row.targetMs?'':'none';
   calBtn.onclick=()=>downloadICS(row.id);
   bot.appendChild(calBtn);
   return bot;
 }
 
-/* ── Table rendering ── */
 function renderTable(){
   bathCalcOffset=null;
   const box=document.getElementById('offsetBox');box.className='offset-box';box.textContent='Waiting for reference row input...';
@@ -832,22 +894,18 @@ function renderTable(){
 function renderRefRow(sheet){
   const tbody=document.getElementById('tbody');
   const tr=document.createElement('tr');tr.className='ref-row';
-
   const tdNum=document.createElement('td');tdNum.className='td-num row-num';tdNum.innerHTML='<span class="ref-badge">REF</span>';tr.appendChild(tdNum);
-
   const tdInd=document.createElement('td');tdInd.className='td-a';
   const indIn=document.createElement('input');
   indIn.type='number';indIn.step='any';indIn.className='bath-input';indIn.id='ind_ref';indIn.placeholder='0.00';indIn.value=sheet.refInd;
   indIn.addEventListener('input',()=>{sheet.refInd=indIn.value;recalcBathOffset();saveToStorage();});
   tdInd.appendChild(indIn);tr.appendChild(tdInd);
-
   const tdBath=document.createElement('td');tdBath.className='td-b';
   const bathIn=document.createElement('input');
   bathIn.type='number';bathIn.step='any';bathIn.className='bath-input';bathIn.id='bath_ref';bathIn.placeholder='0.00';bathIn.value=sheet.refBath;
   bathIn.addEventListener('input',()=>{sheet.refBath=bathIn.value;recalcBathOffset();saveToStorage();});
   tdBath.appendChild(bathIn);tr.appendChild(tdBath);
-
-  const tdSC=document.createElement('td');tdSC.className='td-sc';tdSC.style.color='#1a1a1a';tdSC.textContent='—';tr.appendChild(tdSC);
+  const tdSC=document.createElement('td');tdSC.className='td-sc';tdSC.style.color='#1a1a1a';tdSC.textContent='\u2014';tr.appendChild(tdSC);
   const tdDel=document.createElement('td');tdDel.className='td-del';tr.appendChild(tdDel);
   tbody.appendChild(tr);
   if(sheet.refInd!==''||sheet.refBath!=='')recalcBathOffset();
@@ -858,23 +916,18 @@ function renderDataRow(row){
   const idx=sheet.rows.indexOf(row)+1;
   const tr=document.createElement('tr');tr.id='tr_'+row.id;
   tr.className='data-row'+(row.stirrer?' stirrer-on':'');
-
   const tdNum=document.createElement('td');tdNum.className='td-num row-num';tdNum.textContent=idx;tr.appendChild(tdNum);
-
   const tdInd=document.createElement('td');tdInd.className='td-a';
   const indIn=document.createElement('input');
   indIn.type='number';indIn.step='any';indIn.className='bath-input';indIn.id='ind_'+row.id;indIn.placeholder='0.00';indIn.value=row.indVal||'';
   indIn.addEventListener('input',()=>{row.indVal=indIn.value;recalcAllBath();saveToStorage();});
   tdInd.appendChild(indIn);tr.appendChild(tdInd);
-
   const tdBath=document.createElement('td');tdBath.className='td-b';tdBath.id='bath_'+row.id;
   const ip=parseFloat(row.indVal);
   if(bathCalcOffset!==null&&!isNaN(ip)){tdBath.textContent=(ip+bathCalcOffset).toFixed(2);tdBath.className='td-b calc-value';}
-  else{tdBath.textContent='—';tdBath.className='td-b calc-value calc-empty';}
+  else{tdBath.textContent='\u2014';tdBath.className='td-b calc-value calc-empty';}
   tr.appendChild(tdBath);
-
   const tdSC=document.createElement('td');tdSC.className='td-sc sc-cell';
-  // Line 1: datetime + duration + play
   const line1=document.createElement('div');line1.className='sc-line';
   const startIn=document.createElement('input');
   startIn.type='datetime-local';startIn.className='dt-input';startIn.id='start_'+row.id;startIn.value=row.startDateStr||'';
@@ -882,8 +935,7 @@ function renderDataRow(row){
   line1.appendChild(startIn);
   const durIn=document.createElement('input');
   durIn.type='text';durIn.className='dur-input';durIn.id='dur_'+row.id;durIn.placeholder='hh:mm:ss';durIn.value=row.durationStr||'';
-  attachDurFormatter(durIn, v=>{ row.durationStr=v; saveToStorage(); });
-  durIn.addEventListener('change',()=>{ row.durationStr=durIn.value; saveToStorage(); });
+  attachDurFormatter(durIn, v=>{ if(!v) return; row.durationStr=v; saveToStorage(); });
   line1.appendChild(durIn);
   const playBtn=document.createElement('button');
   playBtn.className='btn-play';playBtn.id='playbtn_'+row.id;playBtn.innerHTML=SVG_PLAY;
@@ -893,10 +945,18 @@ function renderDataRow(row){
   tdSC.appendChild(buildScBottom(row));
   tdSC.appendChild(buildStirrerToggle(row));
   tr.appendChild(tdSC);
-
   const tdDel=document.createElement('td');tdDel.className='td-del';
-  const delBtn=document.createElement('button');delBtn.className='btn-del';delBtn.textContent='✕';
-  delBtn.onclick=()=>{stopRowTimer(row.id);sheet.rows=sheet.rows.filter(r=>r.id!==row.id);tbody.removeChild(tr);renumberRows();recalcAllBath();saveToStorage();};
+  const delBtn=document.createElement('button');delBtn.className='btn-del';delBtn.textContent='\u2715';
+  delBtn.onclick=()=>{
+    stopRowTimer(row.id);
+    sheet.rows=sheet.rows.filter(r=>r.id!==row.id);
+    tbody.removeChild(tr);
+    renumberRows();
+    recalcAllBath();
+    updateInsertPosDefault();
+    saveToStorage();
+    setTimeout(()=>autoStartSequential(false),50);
+  };
   tdDel.appendChild(delBtn);tr.appendChild(tdDel);
   tbody.appendChild(tr);
 }
@@ -906,35 +966,30 @@ function renderRampRow(row){
   const idx=sheet.rows.indexOf(row)+1;
   const tr=document.createElement('tr');tr.id='tr_'+row.id;
   tr.className='ramp-row'+(row.stirrer?' stirrer-on':'');
-
   const tdNum=document.createElement('td');tdNum.className='td-num';
   tdNum.innerHTML='<span class="ramp-badge">RAMP</span><div style="font-size:0.65rem;color:#3a3a5a;margin-top:2px">'+idx+'</div>';
   tr.appendChild(tdNum);
-
   const tdS=document.createElement('td');tdS.className='td-a';
   const sDiv=document.createElement('div');sDiv.className='temp-cell';
-  const sLbl=document.createElement('span');sLbl.className='temp-lbl tl-s';sLbl.textContent='Start °C';
+  const sLbl=document.createElement('span');sLbl.className='temp-lbl tl-s';sLbl.textContent='Start \xB0C';
   const sTIn=document.createElement('input');
   sTIn.type='number';sTIn.step='any';sTIn.className='temp-input';sTIn.id='st_'+row.id;sTIn.placeholder='0.00';sTIn.value=row.startTemp||'';
   sTIn.addEventListener('input',()=>{row.startTemp=sTIn.value;updateRampDerived(row);recalcRampBath(row);saveToStorage();});
   sDiv.appendChild(sLbl);sDiv.appendChild(sTIn);
-  const sBathLbl=document.createElement('div');sBathLbl.className='ramp-bath-lbl';sBathLbl.id='sbath_'+row.id;sBathLbl.textContent='—';
+  const sBathLbl=document.createElement('div');sBathLbl.className='ramp-bath-lbl';sBathLbl.id='sbath_'+row.id;sBathLbl.textContent='\u2014';
   sDiv.appendChild(sBathLbl);
   tdS.appendChild(sDiv);tr.appendChild(tdS);
-
   const tdE=document.createElement('td');tdE.className='td-b';
   const eDiv=document.createElement('div');eDiv.className='temp-cell';
-  const eLbl=document.createElement('span');eLbl.className='temp-lbl tl-e';eLbl.textContent='End °C';
+  const eLbl=document.createElement('span');eLbl.className='temp-lbl tl-e';eLbl.textContent='End \xB0C';
   const eTIn=document.createElement('input');
   eTIn.type='number';eTIn.step='any';eTIn.className='temp-input';eTIn.id='et_'+row.id;eTIn.placeholder='0.00';eTIn.value=row.endTemp||'';
   eTIn.addEventListener('input',()=>{row.endTemp=eTIn.value;updateRampDerived(row);recalcRampBath(row);saveToStorage();});
   eDiv.appendChild(eLbl);eDiv.appendChild(eTIn);
-  const eBathLbl=document.createElement('div');eBathLbl.className='ramp-bath-lbl';eBathLbl.id='ebath_'+row.id;eBathLbl.textContent='—';
+  const eBathLbl=document.createElement('div');eBathLbl.className='ramp-bath-lbl';eBathLbl.id='ebath_'+row.id;eBathLbl.textContent='\u2014';
   eDiv.appendChild(eBathLbl);
   tdE.appendChild(eDiv);tr.appendChild(tdE);
-
   const tdSC=document.createElement('td');tdSC.className='td-sc sc-cell';
-  // Line 1: datetime + play
   const l1=document.createElement('div');l1.className='sc-line';
   const dtIn=document.createElement('input');
   dtIn.type='datetime-local';dtIn.className='dt-input';dtIn.id='start_'+row.id;dtIn.value=row.startDateStr||'';
@@ -945,41 +1000,45 @@ function renderRampRow(row){
   pb.onclick=()=>toggleRowTimer(row.id);
   l1.appendChild(pb);
   tdSC.appendChild(l1);
-  // Line 2: duration ↔ rate
   const l2=document.createElement('div');l2.className='sc-line';
   const durIn=document.createElement('input');
   durIn.type='text';durIn.className='dur-input';durIn.id='dur_'+row.id;durIn.placeholder='hh:mm:ss';durIn.value=row.durationStr||'';
   attachDurFormatter(durIn, v=>{
+    if(!v) return; // don't clear durationStr on empty
     row.durationStr=v; row.lastEdited='dur';
     const r=calcRate(row.startTemp,row.endTemp,v);
     const rEl=document.getElementById('rate_'+row.id);if(rEl&&r!==''){rEl.value=r;row.rateStr=r;}
     saveToStorage();
   });
-  durIn.addEventListener('change',()=>{
-    row.durationStr=durIn.value;row.lastEdited='dur';
-    const r=calcRate(row.startTemp,row.endTemp,durIn.value);
-    const rEl=document.getElementById('rate_'+row.id);if(rEl&&r!==''){rEl.value=r;row.rateStr=r;}
-    saveToStorage();
-  });
-  const arrw=document.createElement('span');arrw.className='rate-lbl';arrw.textContent='↔';
+  const arrw=document.createElement('span');arrw.className='rate-lbl';arrw.textContent='\u2194';
   const rateIn=document.createElement('input');
-  rateIn.type='text';rateIn.className='rate-input';rateIn.id='rate_'+row.id;rateIn.placeholder='°C/h';rateIn.value=row.rateStr||'';
+  rateIn.type='text';rateIn.className='rate-input';rateIn.id='rate_'+row.id;rateIn.placeholder='\xB0C/h';rateIn.value=row.rateStr||'';
   rateIn.addEventListener('change',()=>{
     row.rateStr=rateIn.value;row.lastEdited='rate';
     const dur=calcDur(row.startTemp,row.endTemp,rateIn.value);
-    if(dur!==''){durIn.value=dur;row.durationStr=dur;}
+    if(dur!==''){
+      if(durIn.setDur) durIn.setDur(dur); else durIn.value=dur;
+      row.durationStr=dur;
+    }
     saveToStorage();
   });
-  const rLbl=document.createElement('span');rLbl.className='rate-lbl';rLbl.textContent='°C/h';
+  const rLbl=document.createElement('span');rLbl.className='rate-lbl';rLbl.textContent='\xB0C/h';
   l2.appendChild(durIn);l2.appendChild(arrw);l2.appendChild(rateIn);l2.appendChild(rLbl);
   tdSC.appendChild(l2);
   tdSC.appendChild(buildScBottom(row));
   tdSC.appendChild(buildStirrerToggle(row));
   tr.appendChild(tdSC);
-
   const tdDel=document.createElement('td');tdDel.className='td-del';
-  const delBtn=document.createElement('button');delBtn.className='btn-del';delBtn.textContent='✕';
-  delBtn.onclick=()=>{stopRowTimer(row.id);sheet.rows=sheet.rows.filter(r=>r.id!==row.id);tbody.removeChild(tr);renumberRows();saveToStorage();};
+  const delBtn=document.createElement('button');delBtn.className='btn-del';delBtn.textContent='\u2715';
+  delBtn.onclick=()=>{
+    stopRowTimer(row.id);
+    sheet.rows=sheet.rows.filter(r=>r.id!==row.id);
+    tbody.removeChild(tr);
+    renumberRows();
+    updateInsertPosDefault();
+    saveToStorage();
+    setTimeout(()=>autoStartSequential(false),50);
+  };
   tdDel.appendChild(delBtn);tr.appendChild(tdDel);
   tbody.appendChild(tr);
 }
@@ -994,20 +1053,57 @@ function renumberRows(){
   });
 }
 
+/* ── Insert position helper ── */
+function getInsertIndex(){
+  const sheet=sheetsData[currentSheetIdx];
+  const inp=document.getElementById('insertPos');
+  const total=sheet.rows.length;
+  if(!inp||inp.value===''||inp.value===null) return total;
+  const v=parseInt(inp.value);
+  if(isNaN(v)||v<=0) return 0;
+  if(v>=total) return total;
+  return v;
+}
+function updateInsertPosDefault(){
+  const inp=document.getElementById('insertPos');
+  if(!inp) return;
+  const total=sheetsData[currentSheetIdx].rows.length;
+  inp.value=total; // always point to "after last row"
+}
+
 function addDataRow(){
   const sheet=sheetsData[currentSheetIdx];
+  const insertIdx=getInsertIndex();
   const row={id:++rowIdCounter,type:'data',indVal:'',startDateStr:'',durationStr:'',targetMs:null,stirrer:false};
-  sheet.rows.push(row);renderDataRow(row);saveToStorage();
-  setTimeout(()=>{const el=document.getElementById('ind_'+row.id);if(el){el.focus();el.scrollIntoView({behavior:'smooth',block:'nearest'});}},30);
+  sheet.rows.splice(insertIdx,0,row);
+  stopAllTimers();
+  renderTable();
+  renumberRows();
+  saveToStorage();
+  updateInsertPosDefault();
+  setTimeout(autoStartSequential, 50);
+  setTimeout(()=>{const el=document.getElementById('ind_'+row.id);if(el){el.focus();el.scrollIntoView({behavior:'smooth',block:'nearest'});}},80);
 }
 function addRampRow(){
   const sheet=sheetsData[currentSheetIdx];
-  const row={id:++rowIdCounter,type:'ramp',startTemp:getLastTemp(),endTemp:'',startDateStr:'',durationStr:'',rateStr:'',lastEdited:'dur',targetMs:null,stirrer:false};
-  sheet.rows.push(row);renderRampRow(row);saveToStorage();
-  setTimeout(()=>{const el=document.getElementById('st_'+row.id);if(el){el.focus();el.scrollIntoView({behavior:'smooth',block:'nearest'});}},30);
+  const insertIdx=getInsertIndex();
+  // pick temp of the row just before insert point
+  let prevTemp='';
+  if(insertIdx>0){
+    const prev=sheet.rows[insertIdx-1];
+    if(prev) prevTemp=prev.type==='ramp'?(prev.endTemp||''):(prev.indVal||'');
+  }
+  const row={id:++rowIdCounter,type:'ramp',startTemp:prevTemp,endTemp:'',startDateStr:'',durationStr:'',rateStr:'',lastEdited:'dur',targetMs:null,stirrer:false};
+  sheet.rows.splice(insertIdx,0,row);
+  stopAllTimers();
+  renderTable();
+  renumberRows();
+  saveToStorage();
+  updateInsertPosDefault();
+  setTimeout(autoStartSequential, 50);
+  setTimeout(()=>{const el=document.getElementById('st_'+row.id);if(el){el.focus();el.scrollIntoView({behavior:'smooth',block:'nearest'});}},80);
 }
 
-/* ── Sheets ── */
 function saveCurrentSheetMeta(){
   const sheet=sheetsData[currentSheetIdx];
   const rig=parseInt(document.getElementById('rigNumber').value);
@@ -1022,6 +1118,7 @@ function switchSheet(idx){
   saveCurrentSheetMeta();currentSheetIdx=idx;
   document.getElementById('rigNumber').value=sheetsData[idx].rigNumber;
   renderTable();updateSheetTabs();
+  updateInsertPosDefault();
   setTimeout(autoStartSequential,100);
   saveToStorage();
 }
@@ -1030,24 +1127,24 @@ function addSheet(){
   sheetsData.push({name:'RIG 3',rigNumber:3,refInd:'',refBath:'',notes:'',rows:[]});
   currentSheetIdx=sheetsData.length-1;
   document.getElementById('rigNumber').value=3;
-  renderTable();updateSheetTabs();saveToStorage();
+  renderTable();updateSheetTabs();updateInsertPosDefault();saveToStorage();
 }
 function deleteSheet(idx){
   if(sheetsData.length<=1)return;
   stopAllTimers();sheetsData.splice(idx,1);
   if(currentSheetIdx>=sheetsData.length)currentSheetIdx=sheetsData.length-1;
   document.getElementById('rigNumber').value=sheetsData[currentSheetIdx].rigNumber;
-  renderTable();updateSheetTabs();saveToStorage();
+  renderTable();updateSheetTabs();updateInsertPosDefault();saveToStorage();
 }
 function duplicateSheet(idx){
   saveCurrentSheetMeta();
   const copy=JSON.parse(JSON.stringify(sheetsData[idx]));
-  copy.name=sheetsData[idx].name+' ②';
+  copy.name=sheetsData[idx].name+' \u2462';
   copy.rows.forEach(r=>{r.id=++rowIdCounter;r.targetMs=null;});
   sheetsData.push(copy);
   currentSheetIdx=sheetsData.length-1;
   document.getElementById('rigNumber').value=copy.rigNumber;
-  renderTable();updateSheetTabs();saveToStorage();
+  renderTable();updateSheetTabs();updateInsertPosDefault();saveToStorage();
 }
 
 function updateSheetTabs(){
@@ -1055,10 +1152,10 @@ function updateSheetTabs(){
   sheetsData.forEach((sheet,idx)=>{
     const tab=document.createElement('div');tab.className='sheet-tab'+(idx===currentSheetIdx?' active':'');
     const nm=document.createElement('span');nm.className='sheet-tab-name';nm.textContent=sheet.name;nm.onclick=()=>switchSheet(idx);tab.appendChild(nm);
-    const dupBtn=document.createElement('button');dupBtn.className='sheet-tab-dup';dupBtn.title='Duplicate sheet';dupBtn.textContent='⧉';
+    const dupBtn=document.createElement('button');dupBtn.className='sheet-tab-dup';dupBtn.title='Duplicate sheet';dupBtn.textContent='\u29C9';
     dupBtn.onclick=e=>{e.stopPropagation();duplicateSheet(idx);};tab.appendChild(dupBtn);
     if(sheetsData.length>1){
-      const d=document.createElement('button');d.className='sheet-tab-del';d.title='Delete';d.textContent='×';
+      const d=document.createElement('button');d.className='sheet-tab-del';d.title='Delete';d.textContent='\xD7';
       d.onclick=e=>{e.stopPropagation();if(confirm('Delete '+sheet.name+'?'))deleteSheet(idx);};tab.appendChild(d);
     }
     bar.appendChild(tab);
@@ -1066,15 +1163,23 @@ function updateSheetTabs(){
   const ab=document.createElement('button');ab.className='sheet-add-btn';ab.textContent='+';ab.title='New sheet';ab.onclick=addSheet;bar.appendChild(ab);
 }
 
-/* ── Init ── */
 const restored=loadFromStorage();
 document.getElementById('rigNumber').value=sheetsData[currentSheetIdx].rigNumber;
 renderTable();updateSheetTabs();
-if(!restored){for(let i=0;i<3;i++)addDataRow();}
-else { setTimeout(autoStartSequential, 100); }
+if(!restored){
+  // Directly push 3 blank data rows without triggering full re-render each time
+  const sheet=sheetsData[currentSheetIdx];
+  for(let i=0;i<3;i++){
+    sheet.rows.push({id:++rowIdCounter,type:'data',indVal:'',startDateStr:'',durationStr:'',targetMs:null,stirrer:false});
+  }
+  renderTable(); // single render with all 3 rows
+  updateSheetTabs();
+}else{
+  setTimeout(autoStartSequential, 100);
+}
+updateInsertPosDefault();
 syncTime();setInterval(syncTime,300000);
 
-// ── PWA Service Worker ──
 if('serviceWorker' in navigator){
   window.addEventListener('load', ()=>{
     navigator.serviceWorker.register('./sw.js')
